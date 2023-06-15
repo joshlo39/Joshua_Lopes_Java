@@ -28,11 +28,10 @@ public class Main {
     );
 
     //--------------------------PLAN---------------------------------
-    //create a list for unique customers
-    //iterate through customerData and check if it is in unique customers list
-    //if it is unique add charge to balance and add a new AccountRecord
-    // if it is not unique don't add it in but add charge to that uniqueCustomer.balance
-    //both branches get created an account record
+    //create a list for all customers
+    //iterate through customerData and check if it is already in the list
+    //if it is already in the only add account record to that customer
+    // if it is not unique, create a new customer and add it to the list. Also add the account record to that customer
 
 
     public static void main(String[] args) {
@@ -61,6 +60,7 @@ public class Main {
                 allCustomers.add(newCustomer);
             }
         }
+
         System.out.println("All Customers:" );
         for(Customer customer : allCustomers){
             System.out.println(customer);
@@ -69,10 +69,11 @@ public class Main {
 
         System.out.println("-----------------------------------------------------------------------------------");
         System.out.println("Negative Accounts: " );
-        //print out all negative accounts from allAccounts
-
+        //prints out all negative accounts
         List<Customer> negativeAccounts = allCustomers.stream().filter(customer -> customer.getBalance() < 0).collect(Collectors.toList());
         for (Customer customer : negativeAccounts) {System.out.println(customer);}
+
+        //prints out all negative accounts
         System.out.println("-----------------------------------------------------------------------------------");
         System.out.println("Positive Accounts: ");
         List<Customer> positiveAccounts = allCustomers.stream().filter(customer -> customer.getBalance() > 0).collect(Collectors.toList());
