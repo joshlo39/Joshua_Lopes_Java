@@ -5,6 +5,6 @@ Welcome to the Netflix Bootcamp Projects repository! This repository contains se
 
 ## Project List
 
-#### 1.Movie Recommendation System
+#### 1. Movie Recommendation System
 - Description: The Account Balancing System is a Java project focused on managing and balancing financial accounts. It employs fundamental Java concepts to iterate through collections, converts raw data into Java classes, and utilizes control flow statements or streams to perform account balancing operations.
 - Technologies: Java, Junit, Git
