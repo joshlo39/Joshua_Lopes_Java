@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 public class ChatterbookController {
     private List<User> userList;
 
+    // Fake Database
     public ChatterbookController() {
         User luis = new User("Luis");
         User sue = new User("Sue");
